@@ -38,3 +38,10 @@ filtered_data = imputated_player_data.dropna(subset=["team_name"])
 #3. group by player id and team name
 data_grouped_by_player = filtered_data.groupby(['player_id'])
 data_grouped_by_team = filtered_data.groupby(['team_name'])
+
+#5 save tables to csv
+def compression_options(name): 
+    return dict(method='zip',archive_name=name)
+
+data_grouped_by_player.to_csv('playerData.zip', index=False, compression=compression_options('playerData.zip'))   
+data_grouped_by_team.to_csv('teamData.zip', index=False, compression=compression_options('teamData.zip'))  
