@@ -1,0 +1,53 @@
+team_id,team_name,short_name,years,total_games,total_wins,total_losses,win_loss_percentage,champions,other_names,link,active
+1,Atlanta Hawks,ATL,71,5609,2762,2847,.492,1,"['Atlanta Hawks', 'St. Louis Hawks', 'Milwaukee Hawks', 'Tri-Cities Blackhawks']",/teams/ATL/,True
+2,Boston Celtics,BOS,74,5778,3416,2362,.591,17,['Boston Celtics'],/teams/BOS/,True
+3,Brooklyn Nets,NJN,53,4276,1849,2427,.432,2,"['Brooklyn Nets', 'New Jersey Nets', 'New York Nets', 'New York Nets', 'New Jersey Americans']",/teams/NJN/,True
+4,Charlotte Hornets,CHA,30,2385,1046,1339,.439,0,"['Charlotte Hornets', 'Charlotte Bobcats', 'Charlotte Hornets']",/teams/CHA/,True
+5,Chicago Bulls,CHI,54,4353,2224,2129,.511,6,['Chicago Bulls'],/teams/CHI/,True
+6,Cleveland Cavaliers,CLE,50,4024,1862,2162,.463,1,['Cleveland Cavaliers'],/teams/CLE/,True
+7,Dallas Mavericks,DAL,40,3205,1605,1600,.501,1,['Dallas Mavericks'],/teams/DAL/,True
+8,Denver Nuggets,DEN,53,4277,2154,2123,.504,0,"['Denver Nuggets', 'Denver Nuggets', 'Denver Rockets']",/teams/DEN/,True
+9,Detroit Pistons,DET,72,5672,2752,2920,.485,3,"['Detroit Pistons', 'Fort Wayne Pistons']",/teams/DET/,True
+10,Golden State Warriors,GSW,74,5776,2784,2992,.482,6,"['Golden State Warriors', 'San Francisco Warriors', 'Philadelphia Warriors']",/teams/GSW/,True
+11,Houston Rockets,HOU,53,4271,2260,2011,.529,2,"['Houston Rockets', 'San Diego Rockets']",/teams/HOU/,True
+12,Indiana Pacers,IND,53,4276,2203,2073,.515,3,"['Indiana Pacers', 'Indiana Pacers']",/teams/IND/,True
+13,Los Angeles Clippers,LAC,50,4025,1647,2378,.409,0,"['Los Angeles Clippers', 'San Diego Clippers', 'Buffalo Braves']",/teams/LAC/,True
+14,Los Angeles Lakers,LAL,72,5668,3374,2294,.595,16,"['Los Angeles Lakers', 'Minneapolis Lakers']",/teams/LAL/,True
+15,Memphis Grizzlies,MEM,25,1975,820,1155,.415,0,"['Memphis Grizzlies', 'Vancouver Grizzlies']",/teams/MEM/,True
+16,Miami Heat,MIA,32,2549,1329,1220,.521,3,['Miami Heat'],/teams/MIA/,True
+17,Milwaukee Bucks,MIL,52,4189,2176,2013,.519,1,['Milwaukee Bucks'],/teams/MIL/,True
+18,Minnesota Timberwolves,MIN,31,2465,977,1488,.396,0,['Minnesota Timberwolves'],/teams/MIN/,True
+19,New Orleans Pelicans,NOH,18,1433,666,767,.465,0,"['New Orleans Pelicans', 'NO/Ok. City Hornets', 'New Orleans Hornets']",/teams/NOH/,True
+20,New York Knicks,NYK,74,5776,2795,2981,.484,2,['New York Knicks'],/teams/NYK/,True
+21,Oklahoma City Thunder,OKC,53,4271,2316,1955,.542,1,"['Oklahoma City Thunder', 'Seattle SuperSonics']",/teams/OKC/,True
+22,Orlando Magic,ORL,31,2467,1182,1285,.479,0,['Orlando Magic'],/teams/ORL/,True
+23,Philadelphia 76ers,PHI,71,5606,2892,2714,.516,3,"['Philadelphia 76ers', 'Syracuse Nationals']",/teams/PHI/,True
+24,Phoenix Suns,PHO,52,4189,2208,1981,.527,0,['Phoenix Suns'],/teams/PHO/,True
+25,Portland Trail Blazers,POR,50,4026,2159,1867,.536,1,['Portland Trail Blazers'],/teams/POR/,True
+26,Sacramento Kings,SAC,72,5670,2584,3086,.456,1,"['Sacramento Kings', 'Kansas City Kings', 'Kansas City-Omaha Kings', 'Cincinnati Royals', 'Rochester Royals']",/teams/SAC/,True
+27,San Antonio Spurs,SAS,53,4276,2563,1713,.599,5,"['San Antonio Spurs', 'San Antonio Spurs', 'Texas Chaparrals', 'Dallas Chaparrals']",/teams/SAS/,True
+28,Toronto Raptors,TOR,25,1975,942,1033,.477,1,['Toronto Raptors'],/teams/TOR/,True
+29,Utah Jazz,UTA,46,3696,2000,1696,.541,0,"['Utah Jazz', 'New Orleans Jazz']",/teams/UTA/,True
+30,Washington Wizards,WAS,59,4750,2148,2602,.452,1,"['Washington Wizards', 'Washington Bullets', 'Capital Bullets', 'Baltimore Bullets', 'Chicago Zephyrs', 'Chicago Packers']",/teams/WAS/,True
+31,Anderson Packers,AND,1,64,37,27,.578,0,['Anderson Packers'],/teams/AND/,False
+32,Baltimore Bullets,BLB,8,450,158,292,.351,1,['Baltimore Bullets'],/teams/BLB/,False
+33,Chicago Stags,CHS,4,237,145,92,.612,0,['Chicago Stags'],/teams/CHS/,False
+34,Cleveland Rebels,CLR,1,60,30,30,.500,0,['Cleveland Rebels'],/teams/CLR/,False
+35,Denver Nuggets,DNN,1,62,11,51,.177,0,['Denver Nuggets'],/teams/DNN/,False
+36,Detroit Falcons,DTF,1,60,20,40,.333,0,['Detroit Falcons'],/teams/DTF/,False
+37,Indianapolis Jets,INJ,1,60,18,42,.300,0,['Indianapolis Jets'],/teams/INJ/,False
+38,Indianapolis Olympians,INO,4,269,132,137,.491,0,['Indianapolis Olympians'],/teams/INO/,False
+39,Kentucky Colonels,KEN,9,744,448,296,.602,1,['Kentucky Colonels'],/teams/KEN/,False
+40,Memphis Sounds,MMS,8,660,275,385,.417,0,"['Memphis Sounds', 'Memphis Tams', 'Memphis Pros', 'New Orleans Buccaneers']",/teams/MMS/,False
+41,Pittsburgh Condors,PTC,5,408,180,228,.441,1,"['Pittsburgh Condors', 'Minnesota Pipers', 'Pittsburgh Pipers']",/teams/PTC/,False
+42,Pittsburgh Ironmen,PIT,1,60,15,45,.250,0,['Pittsburgh Ironmen'],/teams/PIT/,False
+43,Providence Steam Rollers,PRO,3,168,46,122,.274,0,['Providence Steam Rollers'],/teams/PRO/,False
+44,San Diego Sails,SDS,4,263,101,162,.384,0,"['San Diego Sails', 'San Diego Conquistadors']",/teams/SDS/,False
+45,Sheboygan Red Skins,SHE,1,62,22,40,.355,0,['Sheboygan Red Skins'],/teams/SHE/,False
+46,Spirits of St. Louis,SSL,9,744,334,410,.449,0,"['Spirits of St. Louis', 'Carolina Cougars', 'Houston Mavericks']",/teams/SSL/,False
+47,St. Louis Bombers,STB,4,237,122,115,.515,0,['St. Louis Bombers'],/teams/STB/,False
+48,The Floridians,FLO,5,408,189,219,.463,0,"['The Floridians', 'Miami Floridians', 'Minnesota Muskies']",/teams/FLO/,False
+49,Toronto Huskies,TRH,1,60,22,38,.367,0,['Toronto Huskies'],/teams/TRH/,False
+50,Utah Stars,UTS,9,676,366,310,.541,1,"['Utah Stars', 'Los Angeles Stars', 'Anaheim Amigos']",/teams/UTS/,False
+51,Virginia Squires,VIR,9,743,326,417,.439,1,"['Virginia Squires', 'Washington Capitols', 'Oakland Oaks']",/teams/VIR/,False
+52,Washington Capitols,WSC,5,271,157,114,.579,0,['Washington Capitols'],/teams/WSC/,False
