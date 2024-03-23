@@ -35,13 +35,15 @@ player_data_with_team_name = pd.merge(merged_player_data,teams[['team_id','team_
 imputated_player_data = inputate_numeric_values(player_data_with_team_name)
 filtered_data = imputated_player_data.dropna(subset=["team_name"])
 
+
 #3. group by player id and team name
-data_grouped_by_player = filtered_data.groupby(['player_id'])
-data_grouped_by_team = filtered_data.groupby(['team_name'])
+data_grouped_by_player = filtered_data.groupby(['player_id']).count().reset_index()
+data_grouped_by_team = filtered_data.groupby(['team_name']).count().reset_index()
 
 #5 save tables to csv
 def compression_options(name): 
     return dict(method='zip',archive_name=name)
 
-data_grouped_by_player.to_csv('playerData.zip', index=False, compression=compression_options('playerData.zip'))   
-data_grouped_by_team.to_csv('teamData.zip', index=False, compression=compression_options('teamData.zip'))  
+data_grouped_by_player.to_csv('playerData.zip', index=False, compression=compression_options('playerData.csv'))   
+data_grouped_by_team.to_csv('teamData.zip', index=False, compression=compression_options('teamData.csv'))  
+
