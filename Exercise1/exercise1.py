@@ -2,9 +2,11 @@ import pandas as pd
 import matplotlib.pyplot as pyplot
 from sklearn.impute import SimpleImputer
 import numpy as np
+import utils
+
 
 #method used to imputate only numeric empty values
-def inputate_numeric_values(data): 
+def imputate_numeric_values(data): 
     categorical_columns = []
     numeric_columns = []
     for c in data.columns:
@@ -32,17 +34,18 @@ merged_player_data = pd.merge(players,player_data,on='player_id')
 player_data_with_team_name = pd.merge(merged_player_data,teams[['team_id','team_name']],on='team_id', how='left')
 
 #2. imputate data and filter out players without a team
-imputated_player_data = inputate_numeric_values(player_data_with_team_name)
+imputated_player_data = imputate_numeric_values(player_data_with_team_name)
 filtered_data = imputated_player_data.dropna(subset=["team_name"])
 
 #3. group by player id and team name
-data_grouped_by_player = filtered_data.groupby(['player_id']).sum()
-data_grouped_by_team = filtered_data.groupby(['team_name']).sum()
+agg_dictionary = utils.build_aggregate_dictionary(players.columns,player_data.columns)
+
+data_grouped_by_player = filtered_data.groupby(['player_id'], as_index=False).agg(agg_dictionary)
+data_grouped_by_team = filtered_data.groupby(['team_name'], as_index=False).agg(agg_dictionary)
+
 
 #5 save tables to csv
 def compression_options(name): 
     return dict(method='zip',archive_name=name)
-
 data_grouped_by_player.to_csv('playerData.zip', index=False, compression=compression_options('playerData.csv'))   
 data_grouped_by_team.to_csv('teamData.zip', index=False, compression=compression_options('teamData.csv'))  
-
