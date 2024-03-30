@@ -43,9 +43,47 @@ agg_dictionary = utils.build_aggregate_dictionary(players.columns,player_data.co
 data_grouped_by_player = filtered_data.groupby(['player_id'], as_index=False).agg(agg_dictionary)
 data_grouped_by_team = filtered_data.groupby(['team_name'], as_index=False).agg(agg_dictionary)
 
+#4. create scatterplot using matplotlib
+minutes_played = data_grouped_by_player['minutes_played'].tolist()
+fg2 = data_grouped_by_player['fg2'].tolist()
+fg2a = data_grouped_by_player['fg2a'].tolist()
+
+colors = fg2
+area = fg2 
+
+pyplot.scatter(minutes_played, fg2, s=area, c=colors, alpha=0.5)
+colorbar = pyplot.colorbar()
+colorbar.set_label("2 Points / minutes played")
+pyplot.xlabel("Minutes played")
+pyplot.ylabel("2 points scored from open play")
+#pyplot.show()
+
+#create stacked for point data
+teams = data_grouped_by_team['team_name'].tolist()
+points = {
+   "fg3p" : data_grouped_by_team['fg3p'].tolist(),
+   "fg2p" : data_grouped_by_team['fg2p'].tolist(),
+}
+
+width = 0.2
+
+fig, ax = pyplot.subplots()
+bottom = np.zeros(len(teams))
+
+for boolean, point in points.items():
+    p = ax.bar(teams, point, width, label=boolean, bottom=bottom)
+    bottom += point
+
+ax.set_title("Points per team")
+ax.legend(loc="upper right")
+
+# Change of fontsize and angle of xticklabels
+pyplot.setp(ax.get_xticklabels(), fontsize=6, rotation=80)
+
+pyplot.show()
 
 #5 save tables to csv
 def compression_options(name): 
     return dict(method='zip',archive_name=name)
-data_grouped_by_player.to_csv('playerData.zip', index=False, compression=compression_options('playerData.csv'))   
-data_grouped_by_team.to_csv('teamData.zip', index=False, compression=compression_options('teamData.csv'))  
+#data_grouped_by_player.to_csv('playerData.zip', index=False, compression=compression_options('playerData.csv'))   
+#data_grouped_by_team.to_csv('teamData.zip', index=False, compression=compression_options('teamData.csv'))  
