@@ -35,13 +35,16 @@ player_data_with_team_name = pd.merge(merged_player_data,teams[['team_id','team_
 
 #2. imputate data and filter out players without a team
 imputated_player_data = imputate_numeric_values(player_data_with_team_name)
-filtered_data = imputated_player_data.dropna(subset=["team_name"])
+imputated_player_data.team_name = imputated_player_data.team_name.fillna("Retired")
 
-#3. group by player id and team name
+#3. group by player_id and team_id
 agg_dictionary = utils.build_aggregate_dictionary(players.columns,player_data.columns)
 
-data_grouped_by_player = filtered_data.groupby(['player_id'], as_index=False).agg(agg_dictionary)
-data_grouped_by_team = filtered_data.groupby(['team_name'], as_index=False).agg(agg_dictionary)
+data_grouped_by_player = imputated_player_data.groupby(['player_id'], as_index=False).agg(agg_dictionary)
+#group by team_id and filter Retired players
+data_grouped_by_team = imputated_player_data.groupby(['team_id'], as_index=False).agg(agg_dictionary)
+data_grouped_by_team = data_grouped_by_team[data_grouped_by_team.team_name != 'Retired']
+
 
 #4. create scatterplot using matplotlib
 minutes_played = data_grouped_by_player['minutes_played'].tolist()
